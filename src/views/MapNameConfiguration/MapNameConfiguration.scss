@@ -1,0 +1,233 @@
+.mapNameConfiguration{
+  padding: 0;
+}
+ul, ul li {
+    list-style: none
+}
+
+.mapNameConfigDataHeight {
+    margin-top: 12px;
+    height: calc(100vh - 235px) !important;
+    overflow: auto;
+}
+.el-aside{
+  .el-scrollbar{
+    margin-top: 12px;
+    height:calc(100vh - 175px);
+    border: 1px solid #409eff;
+    /deep/ .el-scrollbar__wrap{
+      overflow-x: hidden;
+    }
+    .map-name-items{
+      display: block;
+      line-height: 40px;
+      padding: 0 10px;
+      cursor: pointer;
+      color:rgb(96, 98, 102);
+      background-color: rgba(0,0,0,0);
+      transition: all .25s ease-in-out;
+    }
+    .map-name-items:hover,
+    .map-name-items.active{
+      background: rgba(121, 187, 255,.8);
+      color: rgba(255,255,255,1);
+
+    }
+  }
+}
+.el-main{
+  padding: 0 0 0 10px;
+}
+.mapModuleBox {
+    position: relative;
+    width: 230px;
+    height: 312px;
+    border: 2px solid #409EFF;
+    border-radius: 5px;
+
+    .mapModuleBox_layer {
+        position: absolute;
+        background-color: #fff;
+        z-index: 1000;
+        left: -2px;
+        top: -2px;
+        width: 230px;
+        height: 312px;
+        border: 2px solid #fff;
+        opacity: 0.85;
+
+        p {
+            color: red;
+            padding-top: 80px;
+            text-align: center;
+        }
+    }
+
+    .mapCenter {
+        position: absolute;
+        left: 80px;
+        top: 120px;
+        font-weight: normal;
+
+        i {
+            font-size: 26px;
+            color: #409EFF;
+        }
+    }
+
+    .mapUl {
+        li {
+            position: absolute;
+            border: 2px dotted #909399;
+            text-align: center;
+
+            &.hover {
+                border: 2px dotted #E6A23C;
+                color: #E6A23C;
+                z-index: 999;
+                cursor: pointer;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.mapTopLeft {
+                left: 10px;
+                top: 10px;
+                width: 46px;
+                height: 35px;
+                line-height: 35px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            &.mapTopCenter {
+                left: 54px;
+                top: 10px;
+                width: 118px;
+                height: 35px;
+                line-height: 35px;
+            }
+
+            &.mapTopRight {
+                right: 10px;
+                top: 10px;
+                width: 46px;
+                height: 35px;
+                line-height: 35px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            &.mapRight {
+                right: 10px;
+                top: 65px;
+                width: 35px;
+                height: 130px;
+                line-height: 35px;
+                border-radius: 5px;
+                padding-top: 30px;
+                box-sizing: border-box;
+            }
+
+            &.mapBottom {
+                right: 10px;
+                bottom: 10px;
+                width: 206px;
+                height: 75px;
+                line-height: 75px;
+                border-radius: 5px;
+            }
+
+            &.mapMessage {
+                left: 10px;
+                top: 55px;
+                width: 35px;
+                height: 30px;
+                border-radius: 5px;
+                font-size: 22px;
+                vertical-align: middle;
+
+                .el-icon-message {
+                    vertical-align: top !important;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+    .mapContainer {
+        position: absolute;
+        top: 0;
+        left: 240px;
+        width: 480px;
+    }
+
+    .mapTopCenter{
+        /deep/ .el-form-item__content{
+            position: relative;
+            .keyWord {
+                position: absolute;
+                width:320px;
+                top: -6px;
+                left: 72px;
+            }
+        }
+    }
+}
+
+.couponBox /deep/ .el-form-item__content {
+    display: flex;
+    align-items: center;
+    .el-input {
+        width: 240px;
+        margin: 0 20px;
+    }
+    .avatar-uploader {
+        height: 43px;
+    }
+}
+
+.recommendBox {
+    /deep/ .el-form-item__content {
+        .el-radio-group .el-radio {
+            margin-top: 10px;
+            color: #666;
+        }
+        .el-radio-group .el-radio:last-child {
+            display: block;
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+}
+// 顶右 用户积分
+.mapTopRightItem{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.isIntegral{
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+// 底部 配置筛选和排序
+.sortSelectBox{
+    /deep/ .el-checkbox-group{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content:space-between;
+    }
+    .selectBox{
+        margin:10px 0;
+        /deep/ .el-checkbox-group{
+            display: flex;
+            flex-direction:initial;
+            height: auto;
+            justify-content:space-between;
+        }
+    }
+}
